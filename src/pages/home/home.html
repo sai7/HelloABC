@@ -1,14 +1,27 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content>
+    <img height="100%" src="{{background}}" style="position: absolute;" />
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-slides parallax=true (ionSlideDidChange)="slideChanged()">
+
+
+
+
+
+        <ion-slide style="background-color:transparent" *ngFor='let content of contents'>
+            <flash-card [frontContent]="content.front" [backContent]="content.back"></flash-card>
+        </ion-slide>
+
+        <!-- <ion-slide style="background-color: blue">
+            <flash-card [frontContent]="frontImg" [backContent]="backImg"></flash-card>
+        </ion-slide>
+
+        <ion-slide style="background-color: red">
+            <flash-card [frontContent]="frontImg" [backContent]="backImg"></flash-card>
+        </ion-slide> -->
+
+    </ion-slides>
+
+    <!-- <div padding>
+        <flash-card [frontContent]="frontImg" [backContent]="backImg"></flash-card>
+    </div> -->
 </ion-content>

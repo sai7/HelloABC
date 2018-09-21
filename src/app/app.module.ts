@@ -6,15 +6,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { FlashCardComponent } from '../components/flash-card/flash-card';
 
+import {AdMobFree} from '@ionic-native/admob-free';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    FlashCardComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -23,8 +27,9 @@ import { HomePage } from '../pages/home/home';
   ],
   providers: [
     StatusBar,
+    AdMobFree,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

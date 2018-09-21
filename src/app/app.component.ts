@@ -16,6 +16,13 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+
+      //ios
+      // AppID: 'ca-app-pub-3385846881264048~3680013224';
+
+
+      //Android: 
+      // AppID: 'ca-app-pub-3385846881264048~9312733417';
     });
   }
 }

@@ -1,0 +1,14 @@
+<div class="flip-container" (click)="flip()" [class.flipped]="flipped">
+  <div class="flipper">
+
+    <div class="front" color="success" style="color: red;">
+      <img height="100%" src="{{frontContent}}" />
+      <!-- {{frontContent}} -->
+    </div>
+
+    <div class="back">
+      <img height="100%" src="{{backContent}}" /> 
+    </div>
+
+  </div>
+</div>
